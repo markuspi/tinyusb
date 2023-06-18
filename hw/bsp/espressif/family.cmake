@@ -10,6 +10,6 @@ elseif(IDF_TARGET STREQUAL "esp32s3")
 endif()
 
 # Add example src and bsp directories
-set(EXTRA_COMPONENT_DIRS "src" "${CMAKE_CURRENT_LIST_DIR}/boards" "${CMAKE_CURRENT_LIST_DIR}/components")
+list(APPEND EXTRA_COMPONENT_DIRS "src" "${CMAKE_CURRENT_LIST_DIR}/boards" "${CMAKE_CURRENT_LIST_DIR}/components")
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
